@@ -73,6 +73,11 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmembermanagement.aspx" />
     <Content Include="adminpublishermanagement.aspx" />
+    <Content Include="books\b1.jpg" />
+    <Content Include="books\b2.jpg" />
+    <Content Include="books\b3.jpg" />
+    <Content Include="books\b4.jpg" />
+    <Content Include="books\b5.jpg" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
@@ -1898,9 +1903,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="book_inventory\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
