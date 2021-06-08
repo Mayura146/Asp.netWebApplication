@@ -128,22 +128,22 @@ namespace ELibrary
                 }
 
                 SqlCommand cmd = new SqlCommand("SELECT * from author_master_tbl where author_id='" + TextBox1.Text.Trim() + "';", con);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if(dr.HasRows)
+               // SqlDataReader dr = cmd.ExecuteReader();
+                //if(dr.HasRows)
+                //{
+
+                //        TextBox2.Text = dr.GetValue(0).ToString();
+
+                //}
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count >= 1)
                 {
-                    
-                        TextBox2.Text = dr.GetValue(0).ToString();
-                    
+                    TextBox2.Text = dt.Rows[0][1].ToString();
+
                 }
-
-                //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                //    DataTable dt = new DataTable();
-                //    da.Fill(dt);
-                //    if (dt.Rows.Count >= 1)
-                //    {
-                //        TextBox2.Text = dt.Rows[0][1].ToString();
-
-                //    }
 
                 else
                 {
