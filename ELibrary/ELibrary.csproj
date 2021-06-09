@@ -83,6 +83,8 @@
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="css\customstylesheet.css" />
+    <Content Include="datatables\css\jquery.dataTables.min.css" />
+    <Content Include="datatables\jquery\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />

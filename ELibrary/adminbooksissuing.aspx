@@ -100,16 +100,16 @@
 											</div>
 										</div>
 										<div class="row">
-                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LibraryDBConnectionString2 %>" SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
+                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:LibraryDBConnectionString %>" SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
 											<div class="col">
-                                                <asp:GridView class="table table-stripped table-bordered " ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
+                                                <asp:GridView class="table table-stripped table-bordered " ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
 													<Columns>
-														<asp:BoundField DataField="member_id" HeaderText="ID" SortExpression="member_id" />
-														<asp:BoundField DataField="member_name" HeaderText="Name" SortExpression="member_name" />
-														<asp:BoundField DataField="book_id" HeaderText="BookID" SortExpression="book_id" />
-														<asp:BoundField DataField="book_name" HeaderText="BookName" SortExpression="book_name" />
+														<asp:BoundField DataField="member_id" HeaderText="member_id" SortExpression="member_id" />
+														<asp:BoundField DataField="member_name" HeaderText="member_name" SortExpression="member_name" />
+														<asp:BoundField DataField="book_id" HeaderText="book_id" SortExpression="book_id" />
+														<asp:BoundField DataField="book_name" HeaderText="book_name" SortExpression="book_name" />
 														<asp:BoundField DataField="issue_date" HeaderText="issue_date" SortExpression="issue_date" />
-														<asp:BoundField DataField="due_date" HeaderText="MemberID" SortExpression="due_date" />
+														<asp:BoundField DataField="due_date" HeaderText="due_date" SortExpression="due_date" />
 													</Columns>
                                                 </asp:GridView>
 											</div>

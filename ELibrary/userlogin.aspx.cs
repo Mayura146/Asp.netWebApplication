@@ -33,11 +33,14 @@ namespace ELibrary
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    while (dr.Read())
+                    while(dr.HasRows)
                     {
-                        Response.Write("<script> alert('" + dr.GetValue(8).ToString() + "');</script>");
+                        while(dr.Read())
+                        {
+                            Response.Write("<script>alert('" + dr.GetValue(8).ToString() + "');</script>");
+                        }
                     }
-                    Response.Redirect("adminauthormanagement.aspx");
+                    Response.Redirect("userprofile.aspx");
                 }
                 else
                 {
